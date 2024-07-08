@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>08 Jul 2024, 05:28</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.ActivityTabAndTaskValidation.clickDropdownAndSelectEditCommentsText(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="9323900900">9.323</td>
+              <td class="duration" data-value="9323900900">9.323</td>
+              <td class="duration" data-value="9323900900">9.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.ActivityTabAndTaskValidation.descriptionSectionShouldBeBlank()</td>
+              <td>1</td>
+              <td class="duration" data-value="7058922100">7.058</td>
+              <td class="duration" data-value="7058922100">7.058</td>
+              <td class="duration" data-value="7058922100">7.058</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.ActivityTabAndTaskValidation.iClickTheExpandIconForTheCreateBudgetPlanTask()</td>
+              <td>1</td>
+              <td class="duration" data-value="5050293100">5.050</td>
+              <td class="duration" data-value="5050293100">5.050</td>
+              <td class="duration" data-value="5050293100">5.050</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.ActivityTabAndTaskValidation.i_should_see_both_tasks_displayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="9096691400">9.096</td>
+              <td class="duration" data-value="9096691400">9.106</td>
+              <td class="duration" data-value="18193382800">18.193</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.ActivityTabAndTaskValidation.userNavigatesToUrl()</td>
+              <td>1</td>
+              <td class="duration" data-value="6721844300">6.721</td>
+              <td class="duration" data-value="6721844300">6.721</td>
+              <td class="duration" data-value="6721844300">6.721</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.ActivityTabAndTaskValidation.validateInDescriptionNowShows(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="12090213800">12.090</td>
+              <td class="duration" data-value="12090213800">12.090</td>
+              <td class="duration" data-value="12090213800">12.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.insertsValueToBoxDueDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="2121219400">2.121</td>
+              <td class="duration" data-value="2121219400">2.121</td>
+              <td class="duration" data-value="2121219400">2.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.insertsValueToBoxDueDatePutValue()</td>
+              <td>1</td>
+              <td class="duration" data-value="2070527500">2.070</td>
+              <td class="duration" data-value="2070527500">2.070</td>
+              <td class="duration" data-value="2070527500">2.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.leaveBoxRelatedToBlank()</td>
+              <td>2</td>
+              <td class="duration" data-value="109414850">0.109</td>
+              <td class="duration" data-value="109414850">0.120</td>
+              <td class="duration" data-value="218829700">0.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.selectToStatusBoxValueAndSave(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4247364600">4.247</td>
+              <td class="duration" data-value="4247364600">4.247</td>
+              <td class="duration" data-value="4247364600">4.247</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.selectToStatusBoxValueInProgress(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="9293493800">9.293</td>
+              <td class="duration" data-value="9293493800">9.293</td>
+              <td class="duration" data-value="9293493800">9.293</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.theUserOnTheTheMyLeadsView()</td>
+              <td>1</td>
+              <td class="duration" data-value="5191458700">5.191</td>
+              <td class="duration" data-value="5191458700">5.191</td>
+              <td class="duration" data-value="5191458700">5.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.userCreatesATaskInsertsValueToBox(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="164623300">0.164</td>
+              <td class="duration" data-value="164623300">0.182</td>
+              <td class="duration" data-value="329246600">0.329</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.userShouldSeeAPopupNotificationConfirmingTheTaskIsCreated()</td>
+              <td>2</td>
+              <td class="duration" data-value="3336802350">3.336</td>
+              <td class="duration" data-value="3336802350">3.585</td>
+              <td class="duration" data-value="6673604700">6.673</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.user_click_on()</td>
+              <td>2</td>
+              <td class="duration" data-value="2093810850">2.093</td>
+              <td class="duration" data-value="2093810850">2.093</td>
+              <td class="duration" data-value="4187621700">4.187</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.user_clicks_on_the_lead_named()</td>
+              <td>1</td>
+              <td class="duration" data-value="4148754300">4.148</td>
+              <td class="duration" data-value="4148754300">4.148</td>
+              <td class="duration" data-value="4148754300">4.148</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.user_navigate_to_the_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="3072135100">3.072</td>
+              <td class="duration" data-value="3072135100">3.072</td>
+              <td class="duration" data-value="3072135100">3.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.user_should_see_her_record_open()</td>
+              <td>1</td>
+              <td class="duration" data-value="2050334100">2.050</td>
+              <td class="duration" data-value="2050334100">2.050</td>
+              <td class="duration" data-value="2050334100">2.050</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.BettyBairTaskStepDef.valueAssignedToBoxShouldBePopulatedIfNotSelectAnyUser()</td>
+              <td>2</td>
+              <td class="duration" data-value="4147490100">4.147</td>
+              <td class="duration" data-value="4147490100">4.160</td>
+              <td class="duration" data-value="8294980200">8.294</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.FilterAndDisplayAdjustmentsStepDefs.clickAllActivities()</td>
+              <td>1</td>
+              <td class="duration" data-value="7058243600">7.058</td>
+              <td class="duration" data-value="7058243600">7.058</td>
+              <td class="duration" data-value="7058243600">7.058</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.FilterAndDisplayAdjustmentsStepDefs.navigateToUrl()</td>
+              <td>1</td>
+              <td class="duration" data-value="977756300">0.977</td>
+              <td class="duration" data-value="977756300">0.977</td>
+              <td class="duration" data-value="977756300">0.977</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.FilterAndDisplayAdjustmentsStepDefs.userClicksGearIconNextToFiltersAndSetTheDateRangeToTheNextSevenDaysAndApply()</td>
+              <td>1</td>
+              <td class="duration" data-value="13267559300">13.267</td>
+              <td class="duration" data-value="13267559300">13.267</td>
+              <td class="duration" data-value="13267559300">13.267</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.FilterAndDisplayAdjustmentsStepDefs.validateThatOnlyTheTaskIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="14138111300">14.138</td>
+              <td class="duration" data-value="14138111300">14.138</td>
+              <td class="duration" data-value="14138111300">14.138</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.Hooks.setupMethod()</td>
+              <td>6</td>
+              <td class="duration" data-value="1326106783">1.326</td>
+              <td class="duration" data-value="1326106783">2.926</td>
+              <td class="duration" data-value="7956640700">7.956</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="2685784400">2.685</td>
+              <td class="duration" data-value="2685784400">2.777</td>
+              <td class="duration" data-value="16114706400">16.114</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.LoginStepDefs.the_user_clicks_the_login_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="3905299066">3.905</td>
+              <td class="duration" data-value="3905299066">4.053</td>
+              <td class="duration" data-value="23431794400">23.431</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.LoginStepDefs.the_user_enters_valid_username_and_password()</td>
+              <td>6</td>
+              <td class="duration" data-value="195608383">0.195</td>
+              <td class="duration" data-value="195608383">0.296</td>
+              <td class="duration" data-value="1173650300">1.173</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.LoginStepDefs.the_user_is_on_the_salesforce_login_page()</td>
+              <td>6</td>
+              <td class="duration" data-value="450852433">0.450</td>
+              <td class="duration" data-value="450852433">0.511</td>
+              <td class="duration" data-value="2705114600">2.705</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.LoginStepDefs.the_user_should_be_redirected_to_the_salesforce_dashboard()</td>
+              <td>5</td>
+              <td class="duration" data-value="10051410280">10.051</td>
+              <td class="duration" data-value="10051410280">10.104</td>
+              <td class="duration" data-value="50257051400">50.257</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_clicks_on_the_filter_icon()</td>
+              <td>1</td>
+              <td class="duration" data-value="2095747400">2.095</td>
+              <td class="duration" data-value="2095747400">2.095</td>
+              <td class="duration" data-value="2095747400">2.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_ensures_they_are_on_the_view()</td>
+              <td>1</td>
+              <td class="duration" data-value="9218425100">9.218</td>
+              <td class="duration" data-value="9218425100">9.218</td>
+              <td class="duration" data-value="9218425100">9.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_navigates_to_the_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2582880800">2.582</td>
+              <td class="duration" data-value="2582880800">2.582</td>
+              <td class="duration" data-value="2582880800">2.582</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_opens_the_apps_menu_and_proceeds_to_the_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="6841681400">6.841</td>
+              <td class="duration" data-value="6841681400">6.841</td>
+              <td class="duration" data-value="6841681400">6.841</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_saves_the_filter()</td>
+              <td>1</td>
+              <td class="duration" data-value="4110961000">4.110</td>
+              <td class="duration" data-value="4110961000">4.110</td>
+              <td class="duration" data-value="4110961000">4.110</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_sets_to_a_custom_range()</td>
+              <td>1</td>
+              <td class="duration" data-value="8385336400">8.385</td>
+              <td class="duration" data-value="8385336400">8.385</td>
+              <td class="duration" data-value="8385336400">8.385</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.NavigateAndInteractStepDefs.the_user_validates_that_the_filter_has_been_applied_correctly()</td>
+              <td>1</td>
+              <td class="duration" data-value="8054184400">8.054</td>
+              <td class="duration" data-value="8054184400">8.054</td>
+              <td class="duration" data-value="8054184400">8.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.UpdateDeleteDateStepDefs.clicksDropdownOfFirstTaskAndDeleteDataFromUpcomingTasks()</td>
+              <td>1</td>
+              <td class="duration" data-value="24349010600">24.349</td>
+              <td class="duration" data-value="24349010600">24.349</td>
+              <td class="duration" data-value="24349010600">24.349</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.salesforce.step_definitions.UpdateDeleteDateStepDefs.userNavigatesToURL()</td>
+              <td>1</td>
+              <td class="duration" data-value="902278900">0.902</td>
+              <td class="duration" data-value="902278900">0.902</td>
+              <td class="duration" data-value="902278900">0.902</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>38</td>
+            <td>73</td>
+            <td class="duration">4.300</td>
+            <td class="duration">50.257</td>
+            <td class="duration">5:13.959</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
